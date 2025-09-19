@@ -1,9 +1,13 @@
-import Image from "next/image";
+import { HeroSection } from "@/components/hero-section";
+import { CoursesSection } from "@/components/courses-section";
+import { NewsletterSection } from "@/components/newsletter-section";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-     a
+    <div className="min-h-screen bg-[#141416]">
+      <HeroSection />
+      <CoursesSection />
+      <NewsletterSection />
     </div>
   );
 }
