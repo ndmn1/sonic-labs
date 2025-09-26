@@ -120,3 +120,37 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Animated line drawing effect */
+@keyframes draw-line {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+
+.animate-draw-line {
+  animation: draw-line 4s ease-in-out infinite;
+}
+
+/* Square drawing animation */
+@keyframes square-draw {
+  0% {
+    stroke-dashoffset: 24;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 24;
+  }
+}
+
+.animate-square-draw {
+  animation: square-draw 3s ease-in-out infinite;
+}
