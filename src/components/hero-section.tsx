@@ -95,7 +95,7 @@ export function HeroSection() {
   const [shapes, setShapes] = useState(getInitialShapes());
 
   // Function to render different shapes
-  const renderShape = (shape: any, index: number) => {
+  const renderShape = (shape: { x: number; y: number; type: string }, index: number) => {
     const { x, y, type } = shape;
     const commonProps = {
       stroke: GRID_CONFIG.shapes.color,
@@ -208,7 +208,7 @@ export function HeroSection() {
     );
 
     return () => clearInterval(interval);
-  }, [GRID_CONFIG.dots.spacing]); // Re-run when spacing changes
+  }, []);
 
   return (
     <div className="relative min-h-screen bg-[#141416] overflow-hidden">
